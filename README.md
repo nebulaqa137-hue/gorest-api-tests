@@ -1,10 +1,10 @@
-# 🧪 GoRest API Test Suite — REST Assured
+#  GoRest API Test Suite — REST Assured
 
 Suite de pruebas API con **REST Assured + TestNG** aplicando buenas prácticas de automatización QA.
 
 ---
 
-## 📁 Estructura del proyecto
+##  Estructura del proyecto
 
 ```
 gorest-api-tests/
@@ -52,7 +52,7 @@ valid.token=TU_TOKEN_REAL_AQUI
 
 ---
 
-## 🚀 Ejecutar pruebas
+## Ejecutar pruebas
 
 ```bash
 # Todas las pruebas
@@ -76,20 +76,20 @@ mvn allure:serve
 
 ---
 
-## 🧪 Cobertura de pruebas
+## Cobertura de pruebas
 
 | Categoría          | Escenarios | Status Codes         |
 |--------------------|-----------|----------------------|
-| 🔐 Auth            | 4         | 200, 401             |
-| 📦 CRUD            | 9         | 200, 201, 204, 404   |
-| ❌ Negativas        | 8         | 401, 404, 422        |
-| 📊 Schema          | 5         | 200, 201             |
-| 🔗 Integración     | 6         | 200, 201, 204, 404   |
+| Auth            | 4         | 200, 401             |
+|  CRUD            | 9         | 200, 201, 204, 404   |
+|  Negativas        | 8         | 401, 404, 422        |
+|  Schema          | 5         | 200, 201             |
+|  Integración     | 6         | 200, 201, 204, 404   |
 | **TOTAL**          | **~32**   |                      |
 
 ---
 
-## 🏆 Buenas prácticas implementadas
+##  Buenas prácticas implementadas
 
 | Práctica                  | Implementación                                    |
 |---------------------------|---------------------------------------------------|
@@ -105,7 +105,7 @@ mvn allure:serve
 
 ---
 
-## 📊 Descripción de módulos
+##  Descripción de módulos
 
 ### AuthTests
 Valida los tres escenarios de autenticación Bearer Token.
