@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [GoRest API Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+  </listeners>
+  <test thread-count="1" name="Auth Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.api.tests.auth.AuthTests">
+        <methods>
+          <include name="validToken_shouldReturn200"/>
+          <include name="globalSetup"/>
+          <include name="invalidToken_shouldReturn401"/>
+          <include name="noToken_shouldReturn401"/>
+        </methods>
+      </class> <!-- com.api.tests.auth.AuthTests -->
+    </classes>
+  </test> <!-- Auth Tests(failed) -->
+  <test thread-count="1" name="User CRUD Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.api.tests.users.UserCrudTests">
+        <methods>
+          <include name="deleteNonExistentUser_shouldReturn404"/>
+          <include name="globalSetup"/>
+          <include name="patchUser_shouldReturn200"/>
+          <include name="getUserById_withNonExistentId_shouldReturn404"/>
+          <include name="createFemaleUser_shouldReturn201"/>
+          <include name="deleteUser_withValidId_shouldReturn204"/>
+          <include name="updateUser_withValidData_shouldReturn200"/>
+          <include name="createUser_withValidData_shouldReturn201"/>
+          <include name="getUserById_withValidId_shouldReturn200"/>
+          <include name="getUsers_shouldReturn200WithList"/>
+        </methods>
+      </class> <!-- com.api.tests.users.UserCrudTests -->
+    </classes>
+  </test> <!-- User CRUD Tests(failed) -->
+  <test thread-count="1" name="Schema Validation Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.api.tests.schema.SchemaValidationTests">
+        <methods>
+          <include name="createUser_responseShouldMatchSchema"/>
+          <include name="globalSetup"/>
+          <include name="createUser_shouldContainAllRequiredFields"/>
+          <include name="getUser_responseShouldMatchSchema"/>
+          <include name="updateUser_responseShouldMatchSchema"/>
+          <include name="createUser_shouldHaveCorrectDataTypes"/>
+        </methods>
+      </class> <!-- com.api.tests.schema.SchemaValidationTests -->
+    </classes>
+  </test> <!-- Schema Validation Tests(failed) -->
+  <test thread-count="1" name="Negative Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.api.tests.users.NegativeUserTests">
+        <methods>
+          <include name="createUser_withDuplicateEmail_shouldReturn422"/>
+          <include name="createUser_withoutName_shouldReturn422"/>
+          <include name="globalSetup"/>
+          <include name="getUser_nonExistentId_shouldReturn404"/>
+          <include name="createUser_withEmptyBody_shouldReturn422"/>
+          <include name="createUser_withInvalidGender_shouldReturn422"/>
+          <include name="updateUser_nonExistentId_shouldReturn404"/>
+          <include name="createUser_withoutEmail_shouldReturn422"/>
+        </methods>
+      </class> <!-- com.api.tests.users.NegativeUserTests -->
+    </classes>
+  </test> <!-- Negative Tests(failed) -->
+  <test thread-count="1" name="Integration Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.api.tests.integration.UserIntegrationTests">
+        <methods>
+          <include name="step4_confirmUpdate"/>
+          <include name="step5_deleteUser"/>
+          <include name="step1_createUser"/>
+          <include name="globalSetup"/>
+          <include name="step3_updateUser"/>
+          <include name="step2_getAndValidateCreatedUser"/>
+          <include name="step6_confirmDeletion"/>
+        </methods>
+      </class> <!-- com.api.tests.integration.UserIntegrationTests -->
+    </classes>
+  </test> <!-- Integration Tests(failed) -->
+</suite> <!-- Failed suite [GoRest API Test Suite] -->
